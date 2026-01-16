@@ -103,7 +103,7 @@ def home():
 
                     async function fetchJSON(url, opts) {{
                         const res = await fetch(url, opts);
-                        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                        if (!res.ok) throw new Error(`HTTP ${{res.status}}`);
                         return await res.json();
                     }}
 
@@ -184,6 +184,10 @@ def generate_brief():
         "brief_content": f"【风险概述】检测到负面舆情：{news_title}\n【潜在影响】可能对相关股票价格产生短期冲击\n【应对建议】1. 监控股价异常波动 2. 关注公司后续公告\n【监控要点】成交量变化、相关行业政策动向",
         "generated_time": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     })
+
+@app.route('/api/health', methods=['GET'])
+def health():
+    return jsonify({"status": "ok", "time": datetime.now().strftime("%Y-%m-%d %H:%M:%S")})
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8000, debug=False)
