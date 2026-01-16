@@ -1,4 +1,5 @@
 from flask import Flask, jsonify, request
+import os
 from datetime import datetime
 from flask_cors import CORS
 
@@ -190,4 +191,5 @@ def health():
     return jsonify({"status": "ok", "time": datetime.now().strftime("%Y-%m-%d %H:%M:%S")})
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8000, debug=False)
+    port = int(os.environ.get("PORT", 8000))
+    app.run(host='0.0.0.0', port=port, debug=False)
