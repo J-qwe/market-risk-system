@@ -24,3 +24,57 @@ Thumbs.db
 # 其他
 *.log
 *.sqlite3
+ 
+ build/
+ develop-eggs/
+ dist/
+ downloads/
+ eggs/
+ .eggs/
+ lib/
+ lib64/
+ parts/
+ sdist/
+ var/
+ wheels/
+ *.egg-info/
+ .installed.cfg
+ *.egg
+
+ # Additional virtual environment folders
+ env/
+ ENV/
+ env.bak/
+ venv.bak/
+
+ # Editor swap and backup files
+ *~
+
+ # Additional OS-specific files
+ .DS_Store?
+ ._*
+ .Spotlight-V100
+ .Trashes
+ ehthumbs.db
+
+ # Project specific (from analysis repo)
+ data/raw/
+ data/processed/
+ models/
+ logs/
+ *.pkl
+ *.pickle
+ *.h5
+ *.hdf5
+ *.pt
+ *.pth
+
+ # Environment and secrets
+ .secrets
+ config/private*.json
+
+ # Jupyter
+ .ipynb_checkpoints
+
+ # Streamlit
+ .streamlit/
