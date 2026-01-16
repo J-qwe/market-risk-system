@@ -23,7 +23,8 @@ def _current_news():
 @app.route('/')
 def home():
         # 简易落地页，前端直接调用同域 API
-        html = f"""
+        current_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        html = """
         <!doctype html>
         <html lang=zh-CN>
             <head>
@@ -54,7 +55,7 @@ def home():
             <body>
                 <header>
                     <h1>📈 市场舆情风险挖掘系统</h1>
-                    <div class="muted">服务时间：{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}</div>
+                    <div class="muted">服务时间：""" + current_time + """</div>
                 </header>
                 <main>
                     <div class="grid">
