@@ -26,29 +26,29 @@ def home():
         html = f"""
         <!doctype html>
         <html lang=zh-CN>
+            <head>
+                <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <title>市场舆情风险挖掘系统</title>
                 <style>
                     @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap');
-                    body { font-family: 'Manrope', 'Helvetica Neue', sans-serif; margin: 0; background: linear-gradient(180deg, #f4f6fb 0%, #f9fafc 60%, #ffffff 100%); color: #1f2a44; }
-                    header { background: #0d6efd; color: #fff; padding: 16px 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
-                    h1 { margin: 0; font-size: 20px; letter-spacing: 0.4px; }
-                    main { max-width: 1100px; margin: 24px auto; padding: 0 16px 32px; }
-                    .card { background: #fff; border: 1px solid #e9ecef; border-radius: 10px; padding: 16px; margin-bottom: 16px; box-shadow: 0 6px 20px rgba(0,0,0,0.05); }
-                    .btn { display: inline-block; padding: 9px 14px; border-radius: 8px; border: 1px solid #0d6efd; color: #0d6efd; background: #fff; cursor: pointer; font-weight: 600; transition: all 0.2s ease; }
-                    .btn.primary { background: #0d6efd; color: #fff; border-color: #0d6efd; }
-                    .btn:hover { transform: translateY(-1px); box-shadow: 0 6px 16px rgba(13,110,253,0.15); }
-                    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-                    .muted { color: #6c757d; font-size: 12px; }
-                    ul { padding-left: 18px; }
-                    li.risk { color: #c1121f; }
-                    li.safe { color: #2b9348; }
-                    textarea { width: 100%; min-height: 120px; font-family: inherit; border-radius: 8px; border: 1px solid #e2e6ea; padding: 10px; background: #fbfcfe; }
-                    .footer { margin-top: 24px; color: #6c757d; font-size: 12px; text-align: center; }
-                    .pill { display: inline-block; padding: 4px 8px; border-radius: 999px; font-size: 11px; background: #eef2ff; color: #0d6efd; margin-left: 6px; }
-                    .stack { display: grid; gap: 8px; }
-                </style>
+                    body {{ font-family: 'Manrope', 'Helvetica Neue', sans-serif; margin: 0; background: linear-gradient(180deg, #f4f6fb 0%, #f9fafc 60%, #ffffff 100%); color: #1f2a44; }}
+                    header {{ background: #0d6efd; color: #fff; padding: 16px 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }}
+                    h1 {{ margin: 0; font-size: 20px; letter-spacing: 0.4px; }}
+                    main {{ max-width: 1100px; margin: 24px auto; padding: 0 16px 32px; }}
+                    .card {{ background: #fff; border: 1px solid #e9ecef; border-radius: 10px; padding: 16px; margin-bottom: 16px; box-shadow: 0 6px 20px rgba(0,0,0,0.05); }}
+                    .btn {{ display: inline-block; padding: 9px 14px; border-radius: 8px; border: 1px solid #0d6efd; color: #0d6efd; background: #fff; cursor: pointer; font-weight: 600; transition: all 0.2s ease; }}
+                    .btn.primary {{ background: #0d6efd; color: #fff; border-color: #0d6efd; }}
+                    .btn:hover {{ transform: translateY(-1px); box-shadow: 0 6px 16px rgba(13,110,253,0.15); }}
+                    .grid {{ display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }}
+                    .muted {{ color: #6c757d; font-size: 12px; }}
+                    ul {{ padding-left: 18px; }}
+                    li.risk {{ color: #c1121f; }}
                     li.safe {{ color: #2b9348; }}
-                    textarea {{ width: 100%; min-height: 120px; font-family: inherit; }}
-                    .footer {{ margin-top: 24px; color: #666; font-size: 12px; }}
+                    textarea {{ width: 100%; min-height: 120px; font-family: inherit; border-radius: 8px; border: 1px solid #e2e6ea; padding: 10px; background: #fbfcfe; }}
+                    .footer {{ margin-top: 24px; color: #6c757d; font-size: 12px; text-align: center; }}
+                    .pill {{ display: inline-block; padding: 4px 8px; border-radius: 999px; font-size: 11px; background: #eef2ff; color: #0d6efd; margin-left: 6px; }}
+                    .stack {{ display: grid; gap: 8px; }}
                 </style>
             </head>
             <body>
