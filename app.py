@@ -112,7 +112,7 @@ def home():
                         const listEl = document.getElementById('newsList');
                         listEl.innerHTML = '加载中...';
                         try {{
-                            const data = await fetchJSON(`${base}/api/news`);
+                            const data = await fetchJSON(`${{base}}/api/news`);
                             listEl.innerHTML = '';
                             if (!data || !data.length) {{
                                 listEl.innerHTML = '<li class="muted">暂无新闻数据</li>';
@@ -137,7 +137,7 @@ def home():
                         const dash = document.getElementById('dash');
                         dash.textContent = '刷新中...';
                         try {{
-                            const d = await fetchJSON(`${base}/api/dashboard_data`);
+                            const d = await fetchJSON(`${{base}}/api/dashboard_data`);
                             dash.innerHTML = `总新闻：<b>${{d.total_news}}</b>；风险新闻：<b>${{d.risk_news_count}}</b>；风险占比：<b>${{d.risk_ratio}}%</b><br/>最近更新时间：${{d.update_time}}`;
                         }} catch (e) {{ dash.textContent = `加载失败：${{e.message}}`; }}
                     }};
@@ -148,7 +148,7 @@ def home():
                         out.value = '生成中...';
                         try {{
                             const body = {{ news_id: selectedNews.id, news_title: selectedNews.title, news_content: selectedNews.content || '' }};
-                            const resp = await fetchJSON(`${base}/api/generate_brief`, {{ method: 'POST', headers: {{ 'Content-Type': 'application/json' }}, body: JSON.stringify(body) }});
+                            const resp = await fetchJSON(`${{base}}/api/generate_brief`, {{ method: 'POST', headers: {{ 'Content-Type': 'application/json' }}, body: JSON.stringify(body) }});
                             out.value = `标题：${{resp.brief_title}}\n\n${{resp.brief_content}}\n\n生成时间：${{resp.generated_time}}`;
                         }} catch (e) {{ out.value = `生成失败：${{e.message}}`; }}
                     }};
